@@ -45,7 +45,11 @@ function drawChart() {
   ]);
 
 
-  chart.draw(dataTable);
+  chart.draw(dataTable, {
+    timeline: {
+      colorByRowLabel: true
+    }
+  });
 
   nowLine('timeline-container');
 
