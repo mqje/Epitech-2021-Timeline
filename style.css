@@ -16,3 +16,10 @@ h2 {
   margin: 0 auto;
   overflow: hidden;
 }
+
+.bottom{
+    font-family: 'Roboto';
+    text-align:center;
+    color:#666;
+    font-size:14px;
+}
