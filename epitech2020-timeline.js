@@ -2,6 +2,11 @@ google.charts.load("current", {packages:["timeline"]});
 google.charts.setOnLoadCallback(drawChart);
 var today = new Date();
 
+function date(day, month, year)
+{
+  return new Date(year, month - 1, day);
+}
+
 function drawChart() {
   var container = document.getElementById('timeline-container');
   var chart = new google.visualization.Timeline(container);
@@ -11,27 +16,32 @@ function drawChart() {
   dataTable.addColumn({ type: 'date', id: 'Start' });
   dataTable.addColumn({ type: 'date', id: 'End' });
   dataTable.addRows([
-    [ '\0'                                 ,  'Maintenant'                            ,  new Date(today.getFullYear(), today.getMonth()+1, today.getDate()), new Date(today.getFullYear(), today.getMonth()+1, today.getDate()) ],
-    [ 'B4 - Système Unix - Mémoire'        ,  'Malloc'                                ,  new Date(2017, 1, 23), new Date(2017, 2, 12) ],
-    [ 'B4 - C++'                           ,  'NanoTekSpice'                          ,  new Date(2017, 1, 23), new Date(2017, 3, 5)  ],
-    [ 'B4 - Écrits professionnels'         ,  'Mission délicate: recadrer un collègue',  new Date(2017, 1, 30), new Date(2017, 2, 12) ],
-    [ 'B4 - Prog Elem Appliquee / Projet'  ,  'Trade'                                 ,  new Date(2017, 1, 30), new Date(2017, 6, 11) ],
-    [ 'B4 - Écrits professionnels'         ,  'Diaporama pour décrocher 1M$'          ,  new Date(2017, 2, 20), new Date(2017, 3, 5)  ],
-    [ 'B4 - Sécurité Web'                  ,  'SHODAN Call For Paper'                 ,  new Date(2017, 2, 12), new Date(2017, 5, 3)  ],
-    [ 'B4 - Système Unix - Mémoire'        ,  'nm/objdump'                            ,  new Date(2017, 2, 13), new Date(2017, 2, 26) ],
-    [ 'B4 - Sécurité Web'                  ,  'SHODAN'                                ,  new Date(2017, 2, 13), new Date(2017, 3, 12) ],
-    [ 'B4 - Système Unix - Concurrence'    ,  'Philosophes'                           ,  new Date(2017, 3, 6) , new Date(2017, 3, 19) ],
-    [ 'B4 - Écrits professionnels'         ,  'Rédiger un bilan d\'expérience'        ,  new Date(2017, 3, 6) , new Date(2017, 3, 26) ],
-    [ 'B4 - C++'                           ,  'Arcade'                                ,  new Date(2017, 3, 6) , new Date(2017, 4, 9)  ],
-    [ 'B4 - Système Unix - Concurrence'    ,  'LemIPC'                                ,  new Date(2017, 3, 20), new Date(2017, 4, 2)  ],
-    [ 'B4 - Système Unix - Instrumentation',  'strace'                                ,  new Date(2017, 4, 3) , new Date(2017, 4, 16) ],
-    [ 'B4 - C++ II'                        ,  'The Plazza'                            ,  new Date(2017, 4, 10), new Date(2017, 4, 30) ],
-    [ 'B4 - Système Unix - Instrumentation',  'ftrace'                                ,  new Date(2017, 4, 17), new Date(2017, 5, 7)  ],
-    [ 'B4 - C++ II'                        ,  'Indie Studio'                          ,  new Date(2017, 5, 1) , new Date(2017, 6, 11) ],
-    [ 'B4 - Systeme Unix - Réseau'         ,  'MyFTP'                                 ,  new Date(2017, 5, 8) , new Date(2017, 5, 21) ],
-    [ 'B4 - Administration Système'        ,  'Projet My NAS'                         ,  new Date(2017, 5, 15), new Date(2017, 6, 18) ],
-    [ 'B4 - Systeme Unix - Réseau'         ,  'MyIRC'                                 ,  new Date(2017, 5, 22), new Date(2017, 6, 11) ],
-    [ 'B4 - Systeme Unix - Réseau'         ,  'Zappy'                                 ,  new Date(2017, 5, 29), new Date(2017, 7, 2)  ],
+    [ '\0', 'Maintenant', new Date(today.getFullYear(), today.getMonth(), today.getDate()), new Date(today.getFullYear(), today.getMonth(), today.getDate()) ],
+    [ 'B2 - Unix System programming', 'Navy', date(30, 01, 2017), date(19, 02, 2017)],
+    [ 'B2 - Unix System programming', 'Tetris', date(20, 02, 2017), date(19, 03, 2017)],
+    [ 'B2 - French writing skills', '"Le mode d\'emploi : prendre le lecteur par la main"', date(30, 01, 2017), date(19, 02, 2017)],
+    [ 'B2 - French writing skills', '"Faire préciser"', date(27, 02, 2017), date(12, 03, 2017)],
+    [ 'B2 - French writing skills', '"La lettre de vente : informer, argumenter, valoriser"', date(20, 03, 2017), date(16, 04, 2017)],
+    [ 'B2 - Elementary programming in C (Part I)', 'Corewar Championship', date(06, 02, 2017), date(26, 02, 2017)],
+    [ 'B2 - Elementary programming in C (Part I)', 'Matchstick', date(13, 02, 2017), date(26, 02, 2017)],
+    [ 'B2 - Elementary programming in C (Part I)', 'Corewar', date(27, 02, 2017), date(02, 04, 2017)],
+    [ 'B2 - Elementary programming in C (Part I)', 'Rush', date(04, 03, 2017), date(05, 03, 2017)],
+    [ 'B2 - Mathematics', '106bombyx', date(06, 02, 2017), date(19, 02, 2017)],
+    [ 'B2 - Mathematics', '107transfer', date(20, 02, 2017), date(05, 03, 2017)],
+    [ 'B2 - Mathematics', '108trigo', date(06, 03, 2017), date(19, 03, 2017)],
+    [ 'B2 - Mathematics', '109titration', date(20, 03, 2017), date(02, 04, 2017)],
+    [ 'B2 - Mathematics', '110borwein', date(03, 04, 2017), date(16, 04, 2017)],
+    [ 'B2 - C Graphical Programming', 'Raytracer 1', date(06, 02, 2017), date(19, 03, 2017)],
+    [ 'B2 - C Graphical Programming', 'Raytracer', date(20, 03, 2017), date(28, 05, 2017)],
+    [ 'B2 - C Graphical Programming', 'TekAdventure', date(20, 03, 2017), date(28, 05, 2017)],
+    [ 'B2 - C Graphical Programming', 'Rush - Scroller', date(23, 03, 2017), date(26, 03, 2017)],
+    [ 'B2 - Introduction to System Administration', '"My Web" project', date(27, 02, 2017), date(26, 03, 2017)],
+    [ 'B2 - Introduction to Networks', 'Rush #1', date(27, 02, 2017), date(12, 03, 2017)],
+    [ 'B2 - Shell programming', 'MiniShell 2', date(13, 03, 2017), date(11, 04, 2017)],
+    [ 'B2 - Shell programming', '42sh', date(10, 04, 2017), date(04, 06, 2017)],
+    [ 'B2 - Elementary programming in C (Part II)', 'Lem-in', date(03, 04, 2017), date(30, 04, 2017)],
+    [ 'B2 - Elementary programming in C (Part II)', 'Need4Stek', date(01, 05, 2017), date(04, 06, 2017)],
+    [ 'B2 - Elementary programming in C (Part II)', 'Rush', date(20, 05, 2017), date(21, 05, 2017)],
   ]);
 
 
