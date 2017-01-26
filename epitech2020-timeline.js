@@ -12,11 +12,11 @@ function drawChart() {
   var chart = new google.visualization.Timeline(container);
   var dataTable = new google.visualization.DataTable();
   dataTable.addColumn({ type: 'string', id: 'Module' })
-  dataTable.addColumn({ type: 'string', id: 'Projet' });
+  dataTable.addColumn({ type: 'string', id: 'Project' });
   dataTable.addColumn({ type: 'date', id: 'Start' });
   dataTable.addColumn({ type: 'date', id: 'End' });
   dataTable.addRows([
-    [ '\0', 'Maintenant', new Date(today.getFullYear(), today.getMonth(), today.getDate()), new Date(today.getFullYear(), today.getMonth(), today.getDate()) ],
+    [ '\0', 'Now', new Date(today.getFullYear(), today.getMonth(), today.getDate()), new Date(today.getFullYear(), today.getMonth(), today.getDate()) ],
     [ 'B2 - Unix System programming', 'Navy', date(30, 01, 2017), date(19, 02, 2017)],
     [ 'B2 - Unix System programming', 'Tetris', date(20, 02, 2017), date(19, 03, 2017)],
     [ 'B2 - French writing skills', '"Le mode d\'emploi : prendre le lecteur par la main"', date(30, 01, 2017), date(19, 02, 2017)],
@@ -74,11 +74,11 @@ function nowLine(div) {
         }
     })
 
-    var nowWord = $('#' + div + ' text:contains("Maintenant")');
+    var nowWord = $('#' + div + ' text:contains("Now")');
 
     nowWord.prev().first().attr('height', height + 'px').attr('width', '1px').attr('y', '0');
     // add this line to remove the display:none style on the vertical line
-    $('#' + div + '  text:contains("Maintenant")').each(function(idx, value) {
+    $('#' + div + '  text:contains("Now")').each(function(idx, value) {
         if (idx == 0) {
             $(value).parent().find("rect").first().removeAttr("style");
         } else if (idx == 1) {
