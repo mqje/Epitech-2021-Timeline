@@ -34,7 +34,7 @@ function drawChart() {
     [ 'B2 - C Graphical Programming', 'Raytracer 1', date(06, 02, 2017), date(19, 03, 2017)],
     [ 'B2 - C Graphical Programming', 'Raytracer', date(20, 03, 2017), date(28, 05, 2017)],
     [ 'B2 - C Graphical Programming', 'TekAdventure', date(20, 03, 2017), date(28, 05, 2017)],
-    [ 'B2 - C Graphical Programming', 'Rush - Scroller', date(23, 03, 2017), date(26, 03, 2017)],
+    [ 'B2 - C Graphical Programming', 'Rush - Scroller', date(30, 03, 2017), date(02, 04, 2017)],
     [ 'B2 - Introduction to System Administration', '"My Web" project', date(27, 02, 2017), date(26, 03, 2017)],
     [ 'B2 - Introduction to Networks', 'Rush #1', date(27, 02, 2017), date(12, 03, 2017)],
     [ 'B2 - Shell programming', 'MiniShell 2', date(13, 03, 2017), date(11, 04, 2017)],
