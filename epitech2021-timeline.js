@@ -91,3 +91,36 @@ function nowLine(div) {
 
     });
 }
+
+$(document).ready(function(){
+  $.getJSON("https://api.github.com/repos/DeathMiner/Epitech-2021-Timeline/commits", function(json){
+    var msg, el, date;
+
+    $("#changelog-container").empty();
+
+    for (var i = 0; i < json.length; i++) {
+      msg = json[i].commit.message.split("\n");
+      date = moment(json[i].commit.committer.date);
+      el = $(`<p class="commit">
+<a href="${json[i].html_url}" target="_blank" class="commit-msg">${msg[0]}</a>
+<span title="${date.format("dddd, MMMM Do YYYY, h:mm:ss a")}" class="commit-date">${date.fromNow()}</span>
+</p>`);
+      if (msg.length > 1){
+        for (var j = 1; j < msg.length; j++) {
+          if (msg[j].length > 0){
+            el.addClass("expanded");
+            el.find("a").after(`<span class="commit-desc">${msg[j]}</span>`);
+          }
+        }
+      }
+      el.appendTo($("#changelog-container"));
+    }
+
+    if (json.length <= 0){
+      $("#changelog-container").text("No commits !? xO");
+    }
+  })
+  .fail(function(){
+    $("#changelog-container").text("Error while loading changelog :'(");
+  })
+});
