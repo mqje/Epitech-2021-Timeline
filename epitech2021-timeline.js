@@ -106,7 +106,7 @@ $(document).ready(function(){
 <span title="${date.format("dddd, MMMM Do YYYY, h:mm:ss a")}" class="commit-date">${date.fromNow()}</span>
 </p>`);
       if (msg.length > 1){
-        for (var j = 1; j < msg.length; j++) {
+        for (var j = msg.length - 1; j >= 1; j--) {
           if (msg[j].length > 0){
             el.addClass("expanded");
             el.find("a").after(`<span class="commit-desc">${msg[j]}</span>`);
