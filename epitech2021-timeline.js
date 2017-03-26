@@ -122,5 +122,27 @@ $(document).ready(function(){
   })
   .fail(function(){
     $("#changelog-container").text("Error while loading changelog :'(");
+  });
+
+  function set_theme(dark){
+    var dark = dark || false;
+
+    window.localStorage.setItem("dark", dark);
+
+    if (dark){
+      $("body").addClass("dark");
+      $("#switch").text("Switch to light");
+    }
+    else{
+      $("body").removeClass("dark");
+      $("#switch").text("Switch to dark");
+    }
+  }
+
+  $("#switch").on("click", function(){
+    set_theme(!$("body").hasClass("dark"));
+    return false;
   })
+
+  set_theme(window.localStorage.getItem("dark") == "true" ? true : false);
 });
