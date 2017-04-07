@@ -42,6 +42,7 @@ function drawChart() {
     [ 'B2 - Elementary programming in C (Part II)', 'Lem-in', date(03, 04, 2017), date(30, 04, 2017)],
     [ 'B2 - Elementary programming in C (Part II)', 'Need4Stek', date(01, 05, 2017), date(04, 06, 2017)],
     [ 'B2 - Elementary programming in C (Part II)', 'Rush', date(20, 05, 2017), date(21, 05, 2017)],
+    [ 'B2 - Introduction to AI', 'Dante\'s star', date(10, 04, 2017), date(14, 05, 2017)],
   ]);
 
 
