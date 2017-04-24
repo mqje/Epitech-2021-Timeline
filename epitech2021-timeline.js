@@ -38,7 +38,7 @@ function drawChart() {
     [ 'B2 - Introduction to System Administration', '"My Web" project', date(27, 02, 2017), date(26, 03, 2017)],
     [ 'B2 - Introduction to Networks', 'Rush #1', date(27, 02, 2017), date(12, 03, 2017)],
     [ 'B2 - Shell programming', 'MiniShell 2', date(13, 03, 2017), date(11, 04, 2017)],
-    [ 'B2 - Shell programming', '42sh', date(10, 04, 2017), date(04, 06, 2017)],
+    [ 'B2 - Shell programming', '42sh', date(10, 04, 2017), date(21, 05, 2017)],
     [ 'B2 - Elementary programming in C (Part II)', 'Lem-in', date(03, 04, 2017), date(30, 04, 2017)],
     [ 'B2 - Elementary programming in C (Part II)', 'Need4Stek', date(01, 05, 2017), date(04, 06, 2017)],
     [ 'B2 - Elementary programming in C (Part II)', 'Rush', date(20, 05, 2017), date(21, 05, 2017)],
