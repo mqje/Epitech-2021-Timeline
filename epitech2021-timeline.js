@@ -7,6 +7,18 @@ function date(day, month, year)
   return new Date(year, month - 1, day);
 }
 
+function sdate(day, month, year)
+{
+  return date(day, month, year);
+}
+
+function edate(day, month, year)
+{
+  var d = date(day, month, year);
+  d.setDate(d.getDate() + 1);
+  return d;
+}
+
 function drawChart() {
   var container = document.getElementById('timeline-container');
   var chart = new google.visualization.Timeline(container);
@@ -17,32 +29,38 @@ function drawChart() {
   dataTable.addColumn({ type: 'date', id: 'End' });
   dataTable.addRows([
     [ '\0', 'Now', new Date(today.getFullYear(), today.getMonth(), today.getDate()), new Date(today.getFullYear(), today.getMonth(), today.getDate()) ],
-    [ 'B2 - Unix System programming', 'Navy', date(30, 01, 2017), date(19, 02, 2017)],
-    [ 'B2 - Unix System programming', 'Tetris', date(20, 02, 2017), date(19, 03, 2017)],
-    [ 'B2 - French writing skills', '"Le mode d\'emploi : prendre le lecteur par la main"', date(30, 01, 2017), date(19, 02, 2017)],
-    [ 'B2 - French writing skills', '"Faire préciser"', date(27, 02, 2017), date(12, 03, 2017)],
-    [ 'B2 - French writing skills', '"La lettre de vente : informer, argumenter, valoriser"', date(20, 03, 2017), date(16, 04, 2017)],
-    [ 'B2 - Elementary programming in C (Part I)', 'Corewar Championship', date(06, 02, 2017), date(26, 02, 2017)],
-    [ 'B2 - Elementary programming in C (Part I)', 'Matchstick', date(13, 02, 2017), date(26, 02, 2017)],
-    [ 'B2 - Elementary programming in C (Part I)', 'Corewar', date(27, 02, 2017), date(02, 04, 2017)],
-    [ 'B2 - Elementary programming in C (Part I)', 'Rush', date(04, 03, 2017), date(05, 03, 2017)],
-    [ 'B2 - Mathematics', '106bombyx', date(06, 02, 2017), date(19, 02, 2017)],
-    [ 'B2 - Mathematics', '107transfer', date(20, 02, 2017), date(05, 03, 2017)],
-    [ 'B2 - Mathematics', '108trigo', date(06, 03, 2017), date(19, 03, 2017)],
-    [ 'B2 - Mathematics', '109titration', date(20, 03, 2017), date(02, 04, 2017)],
-    [ 'B2 - Mathematics', '110borwein', date(03, 04, 2017), date(16, 04, 2017)],
-    [ 'B2 - C Graphical Programming', 'Raytracer 1', date(06, 02, 2017), date(19, 03, 2017)],
-    [ 'B2 - C Graphical Programming', 'Raytracer', date(20, 03, 2017), date(28, 05, 2017)],
-    [ 'B2 - C Graphical Programming', 'TekAdventure', date(20, 03, 2017), date(28, 05, 2017)],
-    [ 'B2 - C Graphical Programming', 'Rush - Scroller', date(30, 03, 2017), date(02, 04, 2017)],
-    [ 'B2 - Introduction to System Administration', '"My Web" project', date(27, 02, 2017), date(26, 03, 2017)],
-    [ 'B2 - Introduction to Networks', 'Rush #1', date(27, 02, 2017), date(12, 03, 2017)],
-    [ 'B2 - Shell programming', 'MiniShell 2', date(13, 03, 2017), date(11, 04, 2017)],
-    [ 'B2 - Shell programming', '42sh', date(10, 04, 2017), date(21, 05, 2017)],
-    [ 'B2 - Elementary programming in C (Part II)', 'Lem-in', date(03, 04, 2017), date(30, 04, 2017)],
-    [ 'B2 - Elementary programming in C (Part II)', 'Need4Stek', date(01, 05, 2017), date(04, 06, 2017)],
-    [ 'B2 - Elementary programming in C (Part II)', 'Rush', date(02, 06, 2017), date(04, 06, 2017)],
-    [ 'B2 - Introduction to AI', 'Dante\'s star', date(10, 04, 2017), date(14, 05, 2017)],
+    [ 'B2 - Synthesis pool - CONFS', 'Intro to synthesis pool', sdate(12, 06, 2017), edate(12, 06, 2017)],
+    [ 'B2 - Synthesis pool - DAYS', '01', sdate(12, 06, 2017), edate(12, 06, 2017)],
+    [ 'B2 - Synthesis pool - DAYS', '02', sdate(13, 06, 2017), edate(13, 06, 2017)],
+    [ 'B2 - Synthesis pool - DAYS', '03', sdate(14, 06, 2017), edate(14, 06, 2017)],
+    [ 'B2 - Synthesis pool - DAYS', '04', sdate(15, 06, 2017), edate(15, 06, 2017)],
+    [ 'B2 - Synthesis pool - DAYS', '05', sdate(16, 06, 2017), edate(16, 06, 2017)],
+    [ 'B2 - Synthesis pool - DAYS', '06', sdate(17, 06, 2017), edate(17, 06, 2017)],
+    [ 'B2 - Synthesis pool - DAYS', '07', sdate(19, 06, 2017), edate(19, 06, 2017)],
+    [ 'B2 - Synthesis pool - DAYS', '08', sdate(20, 06, 2017), edate(20, 06, 2017)],
+    [ 'B2 - Synthesis pool - DAYS', '09', sdate(21, 06, 2017), edate(21, 06, 2017)],
+    [ 'B2 - Synthesis pool - DAYS', '10', sdate(22, 06, 2017), edate(22, 06, 2017)],
+    [ 'B2 - Synthesis pool - DAYS', '11', sdate(23, 06, 2017), edate(23, 06, 2017)],
+    [ 'B2 - Synthesis pool - DAYS', '12', sdate(24, 06, 2017), edate(24, 06, 2017)],
+    [ 'B2 - Synthesis pool - DAYS', '13', sdate(26, 06, 2017), edate(26, 06, 2017)],
+    [ 'B2 - Synthesis pool - DAYS', '14', sdate(27, 06, 2017), edate(27, 06, 2017)],
+    [ 'B2 - Synthesis pool - DAYS', '15', sdate(28, 06, 2017), edate(28, 06, 2017)],
+    [ 'B2 - Synthesis pool - DAYS', '16', sdate(29, 06, 2017), edate(29, 06, 2017)],
+    [ 'B2 - Synthesis pool - DAYS', '17', sdate(30, 06, 2017), edate(30, 06, 2017)],
+    [ 'B2 - Synthesis pool - DAYS', '18', sdate(01, 07, 2017), edate(01, 07, 2017)],
+    [ 'B2 - Synthesis pool - PROJECTS', 'SBMLparser', sdate(12, 06, 2017), edate(14, 06, 2017)],
+    [ 'B2 - Synthesis pool - PROJECTS', 'palindrome', sdate(15, 06, 2017), edate(17, 06, 2017)],
+    [ 'B2 - Synthesis pool - PROJECTS', 'FASTAtools', sdate(19, 06, 2017), edate(20, 06, 2017)],
+    [ 'B2 - Synthesis pool - PROJECTS', 'projTester', sdate(21, 06, 2017), edate(24, 06, 2017)],
+    [ 'B2 - Synthesis pool - PROJECTS', 'automakefile', sdate(26, 06, 2017), edate(28, 06, 2017)],
+    [ 'B2 - Synthesis pool - PROJECTS', 'calendar', sdate(29, 06, 2017), edate(01, 07, 2017)],
+    [ 'B2 - Synthesis pool - CHECKPOINTS', 'SBMLparser', sdate(14, 06, 2017), edate(14, 06, 2017)],
+    [ 'B2 - Synthesis pool - CHECKPOINTS', 'palindrome', sdate(17, 06, 2017), edate(17, 06, 2017)],
+    [ 'B2 - Synthesis pool - CHECKPOINTS', 'FASTAtools', sdate(20, 06, 2017), edate(20, 06, 2017)],
+    [ 'B2 - Synthesis pool - CHECKPOINTS', 'projTester', sdate(24, 06, 2017), edate(24, 06, 2017)],
+    [ 'B2 - Synthesis pool - CHECKPOINTS', 'automakefile', sdate(28, 06, 2017), edate(28, 06, 2017)],
+    [ 'B2 - Synthesis pool - CHECKPOINTS', 'calendar', sdate(01, 07, 2017), edate(01, 07, 2017)],
+    [ 'B2 - Synthesis pool - CHECKPOINTS', 'individual assessment', sdate(02, 07, 2017), edate(04, 07, 2017)]
   ]);
 
 
