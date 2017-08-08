@@ -29,38 +29,7 @@ function drawChart() {
   dataTable.addColumn({ type: 'date', id: 'End' });
   dataTable.addRows([
     [ '\0', 'Now', new Date(today.getFullYear(), today.getMonth(), today.getDate()), new Date(today.getFullYear(), today.getMonth(), today.getDate()) ],
-    [ 'B2 - Synthesis pool - CONFS', 'Intro to synthesis pool', sdate(12, 06, 2017), edate(12, 06, 2017)],
-    [ 'B2 - Synthesis pool - DAYS', '01', sdate(12, 06, 2017), edate(12, 06, 2017)],
-    [ 'B2 - Synthesis pool - DAYS', '02', sdate(13, 06, 2017), edate(13, 06, 2017)],
-    [ 'B2 - Synthesis pool - DAYS', '03', sdate(14, 06, 2017), edate(14, 06, 2017)],
-    [ 'B2 - Synthesis pool - DAYS', '04', sdate(15, 06, 2017), edate(15, 06, 2017)],
-    [ 'B2 - Synthesis pool - DAYS', '05', sdate(16, 06, 2017), edate(16, 06, 2017)],
-    [ 'B2 - Synthesis pool - DAYS', '06', sdate(17, 06, 2017), edate(17, 06, 2017)],
-    [ 'B2 - Synthesis pool - DAYS', '07', sdate(19, 06, 2017), edate(19, 06, 2017)],
-    [ 'B2 - Synthesis pool - DAYS', '08', sdate(20, 06, 2017), edate(20, 06, 2017)],
-    [ 'B2 - Synthesis pool - DAYS', '09', sdate(21, 06, 2017), edate(21, 06, 2017)],
-    [ 'B2 - Synthesis pool - DAYS', '10', sdate(22, 06, 2017), edate(22, 06, 2017)],
-    [ 'B2 - Synthesis pool - DAYS', '11', sdate(23, 06, 2017), edate(23, 06, 2017)],
-    [ 'B2 - Synthesis pool - DAYS', '12', sdate(24, 06, 2017), edate(24, 06, 2017)],
-    [ 'B2 - Synthesis pool - DAYS', '13', sdate(26, 06, 2017), edate(26, 06, 2017)],
-    [ 'B2 - Synthesis pool - DAYS', '14', sdate(27, 06, 2017), edate(27, 06, 2017)],
-    [ 'B2 - Synthesis pool - DAYS', '15', sdate(28, 06, 2017), edate(28, 06, 2017)],
-    [ 'B2 - Synthesis pool - DAYS', '16', sdate(29, 06, 2017), edate(29, 06, 2017)],
-    [ 'B2 - Synthesis pool - DAYS', '17', sdate(30, 06, 2017), edate(30, 06, 2017)],
-    [ 'B2 - Synthesis pool - DAYS', '18', sdate(01, 07, 2017), edate(01, 07, 2017)],
-    [ 'B2 - Synthesis pool - PROJECTS', 'SBMLparser', sdate(12, 06, 2017), edate(14, 06, 2017)],
-    [ 'B2 - Synthesis pool - PROJECTS', 'palindrome', sdate(15, 06, 2017), edate(17, 06, 2017)],
-    [ 'B2 - Synthesis pool - PROJECTS', 'FASTAtools', sdate(19, 06, 2017), edate(20, 06, 2017)],
-    [ 'B2 - Synthesis pool - PROJECTS', 'projTester', sdate(21, 06, 2017), edate(24, 06, 2017)],
-    [ 'B2 - Synthesis pool - PROJECTS', 'automakefile', sdate(26, 06, 2017), edate(28, 06, 2017)],
-    [ 'B2 - Synthesis pool - PROJECTS', 'calendar', sdate(29, 06, 2017), edate(01, 07, 2017)],
-    [ 'B2 - Synthesis pool - CHECKPOINTS', 'SBMLparser', sdate(14, 06, 2017), edate(14, 06, 2017)],
-    [ 'B2 - Synthesis pool - CHECKPOINTS', 'palindrome', sdate(17, 06, 2017), edate(17, 06, 2017)],
-    [ 'B2 - Synthesis pool - CHECKPOINTS', 'FASTAtools', sdate(20, 06, 2017), edate(20, 06, 2017)],
-    [ 'B2 - Synthesis pool - CHECKPOINTS', 'projTester', sdate(24, 06, 2017), edate(24, 06, 2017)],
-    [ 'B2 - Synthesis pool - CHECKPOINTS', 'automakefile', sdate(28, 06, 2017), edate(28, 06, 2017)],
-    [ 'B2 - Synthesis pool - CHECKPOINTS', 'calendar', sdate(01, 07, 2017), edate(01, 07, 2017)],
-    [ 'B2 - Synthesis pool - CHECKPOINTS', 'individual assessment', sdate(02, 07, 2017), edate(04, 07, 2017)]
+    [ 'B3 - Internship', 'Internship', sdate(01, 07, 2017), edate(31, 12, 2017)]
   ]);
 
 
