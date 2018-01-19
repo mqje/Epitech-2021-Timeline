@@ -33,7 +33,7 @@ function drawChart() {
     [ 'B4 - Unix Programming - Memory', 'Malloc', sdate(22, 01, 2018), edate(11, 02, 2018)],
     [ 'B4 - Unix Programming - Memory', 'nm/objdump', sdate(12, 02, 2018), edate(25, 02, 2018)],
     [ 'B4 - C++(Part I)', 'NanoTekSpice', sdate(22, 01, 2018), edate(04, 03, 2018)],
-    [ 'B4 - C++(Part I)', 'Aracade', sdate(05, 03, 2018), edate(08, 04, 2018)],
+    [ 'B4 - C++(Part I)', 'Arcade', sdate(05, 03, 2018), edate(08, 04, 2018)],
     [ 'B4 - FR - Écrits professionnels', 'Mission délicate: recadrer un collègue', sdate(29, 01, 2018), edate(11, 02, 2018)],
     [ 'B4 - FR - Écrits professionnels', 'Diaporama pour décrocher 1 million de dollars', sdate(19, 02, 2018), edate(04, 03, 2018)],
     [ 'B4 - FR - Écrits professionnels', 'Rediger un bilan d\'expérience', sdate(05, 03, 2018), edate(18, 03, 2018)],
@@ -54,7 +54,7 @@ function drawChart() {
     [ 'B4 - Unix Programming - Instrumentation', 'strace', sdate(26, 03, 2018), edate(08, 04, 2018)],
     [ 'B4 - Unix Programming - Instrumentation', 'ftrace', sdate(23, 04, 2018), edate(13, 05, 2018)],
     [ 'B4 - C++(Part II)', 'The Plazza', sdate(16, 04, 2018), edate(06, 05, 2018)],
-    [ 'B4 - C++(Part II)', 'Indie Dtudio', sdate(07, 05, 2018), edate(10, 06, 2018)],
+    [ 'B4 - C++(Part II)', 'Indie Studio', sdate(07, 05, 2018), edate(10, 06, 2018)],
     [ 'B4 - Unix Programming - Network', 'MyFTP', sdate(16, 04, 2018), edate(29, 04, 2018)],
     [ 'B4 - Unix Programming - Network', 'MyIRC', sdate(07, 05, 2018), edate(27, 05, 2018)],
     [ 'B4 - Unix Programming - Network', 'Zappy', sdate(28, 05, 2018), edate(24, 06, 2018)]
