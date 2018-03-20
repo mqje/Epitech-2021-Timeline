@@ -61,7 +61,11 @@ function drawChart() {
     [ 'B4 - C++(Part II)', 'Indie Studio', sdate(07, 05, 2018), edate(10, 06, 2018)],
     [ 'B4 - Unix Programming - Network', 'MyFTP', sdate(16, 04, 2018), edate(29, 04, 2018)],
     [ 'B4 - Unix Programming - Network', 'MyIRC', sdate(07, 05, 2018), edate(27, 05, 2018)],
-    [ 'B4 - Unix Programming - Network', 'Zappy', sdate(28, 05, 2018), edate(24, 06, 2018)]
+    [ 'B4 - Unix Programming - Network', 'Zappy', sdate(28, 05, 2018), edate(24, 06, 2018)],
+    [ 'B4 - System Administration', 'Rush #1', sdate(23, 04, 2018), edate(06, 05, 2018)],
+    [ 'B4 - System Administration', 'My NAS', sdate(14, 05, 2018), edate(17, 06, 2018)],
+    [ 'B4 - Networks', 'Rush 1', sdate(30, 04, 2018), edate(13, 05, 2018)],
+    [ 'B4 - Networks', 'Rush 2', sdate(21, 05, 2018), edate(03, 06, 2018)],
   ]);
 
 
