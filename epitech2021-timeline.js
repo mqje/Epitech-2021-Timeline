@@ -7,12 +7,12 @@ function date(day, month, year)
   return new Date(year, month - 1, day);
 }
 
-function sdate(day, month, year)
+function start(day, month, year)
 {
   return date(day, month, year);
 }
 
-function edate(day, month, year)
+function end(day, month, year)
 {
   var d = date(day, month, year);
   d.setDate(d.getDate() + 1);
@@ -27,48 +27,82 @@ function drawChart() {
   dataTable.addColumn({ type: 'string', id: 'Project' });
   dataTable.addColumn({ type: 'date', id: 'Start' });
   dataTable.addColumn({ type: 'date', id: 'End' });
-  dataTable.addRows([
-    [ '\0', 'Now', new Date(today.getFullYear(), today.getMonth(), today.getDate()), new Date(today.getFullYear(), today.getMonth(), today.getDate()) ],
-    [ 'B4 - Shell Scripting ', 'ShellScript Project', sdate(22, 01, 2018), edate(28, 01, 2018)],
-    [ 'B4 - Unix Programming - Memory', 'Malloc', sdate(22, 01, 2018), edate(11, 02, 2018)],
-    [ 'B4 - Unix Programming - Memory', 'nm/objdump', sdate(12, 02, 2018), edate(25, 02, 2018)],
-    [ 'B4 - C++(Part I)', 'NanoTekSpice', sdate(22, 01, 2018), edate(04, 03, 2018)],
-    [ 'B4 - C++(Part I)', 'Arcade', sdate(05, 03, 2018), edate(08, 04, 2018)],
-    [ 'B4 - FR - Écrits professionnels', 'Mission délicate: recadrer un collègue', sdate(29, 01, 2018), edate(11, 02, 2018)],
-    [ 'B4 - FR - Écrits professionnels', 'Diaporama pour décrocher 1 million de dollars', sdate(19, 02, 2018), edate(04, 03, 2018)],
-    [ 'B4 - FR - Écrits professionnels', 'Rediger un bilan d\'expérience', sdate(05, 03, 2018), edate(18, 03, 2018)],
-    [ 'B4 - Computer Numerical Analysis - Trading', 'Bollinger bands', sdate(05, 02, 2018), edate(18, 03, 2018)],
-    [ 'B4 - Computer Numerical Analysis - Trading', 'Trade', sdate(19, 03, 2018), edate(10, 06, 2018)],
-    [ 'S0 - Web Security', 'Call For Papers', sdate(05, 02, 2018), edate(25, 02, 2018)],
-    [ 'S0 - Web Security', 'SHODAN', sdate(26, 02, 2018), edate(11, 03, 2018)],
-    [ 'B4 - Mathematics', '201yams', sdate(12, 02, 2018), edate(25, 02, 2018)],
-    [ 'B4 - Mathematics', '202invendus', sdate(26, 02, 2018), edate(11, 03, 2018)],
-    [ 'B4 - Mathematics', '203hotline', sdate(12, 03, 2018), edate(25, 03, 2018)],
-    [ 'B4 - Mathematics', '204canards', sdate(26, 03, 2018), edate(08, 04, 2018)],
-    [ 'B4 - Mathematics', '205QI', sdate(09, 04, 2018), edate(22, 04, 2018)],
-    [ 'B4 - Mathematics', '206neutrinos', sdate(23, 04, 2018), edate(06, 05, 2018)],
-    [ 'B4 - Mathematics', '207demographie', sdate(07, 05, 2018), edate(20, 05, 2018)],
-    [ 'B4 - Mathematics', '208chevillettes', sdate(14, 05, 2018), edate(27, 05, 2018)],
-    [ 'B4 - Mathematics', '209sondage', sdate(21, 05, 2018), edate(03, 06, 2018)],
-    [ 'B4 - x86-64 Assembly', 'MiniLibC', sdate(26, 02, 2018), edate(25, 03, 2018)],
-    [ 'B4 - Unix Programming - Concurrency', 'Philosophers', sdate(26, 02, 2018), edate(11, 03, 2018)],
-    [ 'B4 - Unix Programming - Concurrency', 'LemIPC', sdate(12, 03, 2018), edate(25, 03, 2018)],
-    [ 'B4 - Unix Programming - Instrumentation', 'strace', sdate(26, 03, 2018), edate(08, 04, 2018)],
-    [ 'B4 - Unix Programming - Instrumentation', 'ftrace', sdate(23, 04, 2018), edate(13, 05, 2018)],
-    [ 'S0 - Binary Security', 'Call For Papers', sdate(9, 04, 2018), edate(25, 04, 2018)],
-    [ 'S0 - Binary Security', 'NOOB', sdate(30, 04, 2018), edate(13, 05, 2018)],
-    [ 'B4 - C++(Part II)', 'The Plazza', sdate(16, 04, 2018), edate(06, 05, 2018)],
-    [ 'B4 - C++(Part II)', 'Indie Studio', sdate(07, 05, 2018), edate(10, 06, 2018)],
-    [ 'B4 - Unix Programming - Network', 'MyFTP', sdate(16, 04, 2018), edate(29, 04, 2018)],
-    [ 'B4 - Unix Programming - Network', 'MyIRC', sdate(07, 05, 2018), edate(27, 05, 2018)],
-    [ 'B4 - Unix Programming - Network', 'Zappy', sdate(28, 05, 2018), edate(24, 06, 2018)],
-    [ 'B4 - Functional programming', 'deBruijn', sdate(23, 04, 2018), edate(06, 05, 2018)],
-    [ 'B4 - Functional programming', 'Image Compressor', sdate(07, 05, 2018), edate(27, 05, 2018)],
-    [ 'B4 - System Administration', 'Rush #1', sdate(23, 04, 2018), edate(06, 05, 2018)],
-    [ 'B4 - System Administration', 'My NAS', sdate(14, 05, 2018), edate(17, 06, 2018)],
-    [ 'B4 - Networks', 'Rush 1', sdate(30, 04, 2018), edate(13, 05, 2018)],
-    [ 'B4 - Networks', 'Rush 2', sdate(21, 05, 2018), edate(03, 06, 2018)],
-  ]);
+  var now = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+  var left = date(4, 9, 2018);
+  var data = [
+    [ '\0', 'Now', now, now, { type: 'now' } ],
+
+    [ 'Roadblock - Innovation & Part-Time', 'You must acquire at least 15 credits with the units (5 units) listed partly below:', left, left, { type: 'separator' } ],
+
+    [ 'Moonshot', 'First week project', start(4, 9, 2018), end(7, 9, 2018) ],
+    [ 'Moonshot', '#LOCAL THEME', start(4, 9, 2018), end(5, 9, 2018) ],
+    [ 'Moonshot', '#SANTE', start(5, 9, 2018), end(6, 9, 2018) ],
+    [ 'Moonshot', '#ENERGIE', start(6, 9, 2018), end(7, 9, 2018) ],
+    [ 'Moonshot', 'Second week project', start(10, 9, 2018), end(13, 9, 2018) ],
+    [ 'Moonshot', '#TRANSPORTS', start(10, 9, 2018), end(11, 9, 2018) ],
+    [ 'Moonshot', '#FINTECH', start(11, 9, 2018), end(12, 9, 2018) ],
+    [ 'Moonshot', '#FOODTECH', start(12, 9, 2018), end(13, 9, 2018) ],
+    [ 'Moonshot', 'Moonshot project', start(14, 9, 2018), end(19, 10, 2018) ],
+
+    [ 'Canvas & Proto', 'EIP Bootstrap (BMC)', start(22, 10, 2018), end(2, 12, 2018) ],
+
+    [ 'Accelerator', 'EIP Bootstrap (Forward)', start(3, 12, 2018), end(14, 12, 2018) ],
+
+    [ 'EIP Validation', 'EIP - Choix du sujet', start(3, 9, 2018), end(29, 1, 2019) ],
+
+    [ 'Part-Time Job', 'Part-time internship', start(17, 9, 2018), end(10, 3, 2019) ],
+
+    [ 'Roadblock - Soft Skills', 'You must acquire at least 5 credits with the units (6 units) listed partly below:', left, left, { type: 'separator' } ],
+
+    [ 'Écrits Professionnels', 'Avocat du diable', start(17, 9, 2018), end(7, 10, 2018) ],
+    [ 'Écrits Professionnels', '3 emails', start(8, 10, 2018), end(28, 10, 2018) ],
+    [ 'Écrits Professionnels', 'Mémo professionnel', start(29, 10, 2018), end(18, 11, 2018) ],
+    [ 'Écrits Professionnels', 'Informer: Le magazine du geek', start(12, 11, 2018), end(13, 1, 2019) ],
+
+    [ 'Roadblock - Technical Expertise', 'You must acquire at least 15 credits with the technical units (13 units) listed partly below:', left, left, { type: 'separator' } ],
+
+    [ 'Mathematics', '301dannon', start(17, 9, 2018), end(30, 9, 2018) ],
+    [ 'Mathematics', '302separation', start(1, 10, 2018), end(14, 10, 2018) ],
+    [ 'Mathematics', '303make', start(15, 10, 2018), end(28, 10, 2018) ],
+    [ 'Mathematics', '304pacman', start(29, 10, 2018), end(11, 11, 2018) ],
+    [ 'Mathematics', '305construction', start(12, 11, 2018), end(25, 11, 2018) ],
+    [ 'Mathematics', '306radiator', start(26, 11, 2018), end(23, 12, 2018) ],
+    [ 'Mathematics', '307multigrains', start(24, 12, 2018), end(13, 1, 2019) ],
+    [ 'Mathematics', '308reedpipes', start(14, 1, 2019), end(27, 1, 2019) ],
+    [ 'Mathematics', '309pollution', start(28, 1, 2019), end(10, 2, 2019) ],
+
+    [ 'Security - Cryptography', 'Call For Papers', start(3, 9, 2018), end(30, 9, 2018) ],
+    [ 'Security - Cryptography', 'CAESAR', start(17, 9, 2018), end(30, 9, 2018) ],
+    [ 'Security - Cryptography', 'BTTF - CAESAR', start(5, 11, 2018), end(11, 11, 2018) ],
+
+    [ 'Advanced C++ (3 units)', 'Babel', start(17, 9, 2018), end(7, 10, 2018) ],
+    [ 'Advanced C++ (3 units)', 'BTTF - Babel', start(5, 11, 2018), end(11, 11, 2018) ],
+    [ 'Advanced C++ (3 units)', 'R-Type', start(5, 11, 2018), end(2, 12, 2018) ],
+    [ 'Advanced C++ (3 units)', 'BTTF - R-Type', start(21, 1, 2019), end(27, 1, 2019) ],
+    [ 'Advanced C++ (3 units)', 'Zia', start(14, 1, 2019), end(10, 3, 2019) ],
+
+    [ 'Application Development (3 units)', 'Dashboard', start(1, 10, 2018), end(21, 10, 2018) ],
+    [ 'Application Development (3 units)', 'BTTF - Dashboard', start(5, 11, 2018), end(11, 11, 2018) ],
+    [ 'Application Development (3 units)', 'Epicture', start(29, 10, 2018), end(18, 11, 2018) ],
+    [ 'Application Development (3 units)', 'BTTF - Epicture', start(21, 1, 2019), end(27, 1, 2019) ],
+    [ 'Application Development (3 units)', 'AREA', start(14, 1, 2019), end(10, 3, 2019) ],
+
+    [ 'Artificial Intelligence', 'Gomoku', start(8, 10, 2018), end(28, 10, 2018) ],
+    [ 'Artificial Intelligence', 'BTTF - Gomoku', start(5, 11, 2018), end(11, 11, 2018) ],
+
+    [ 'Advanced Functional Programming (3 units)', 'functional evalExpr', start(22, 10, 2018), end(4, 11, 2018) ],
+    [ 'Advanced Functional Programming (3 units)', 'BTTF - functional evalExpr', start(5, 11, 2018), end(11, 11, 2018) ],
+    [ 'Advanced Functional Programming (3 units)', 'dumbXML', start(19, 11, 2018), end(13, 1, 2019) ],
+    [ 'Advanced Functional Programming (3 units)', 'BTTF - dumbXML', start(21, 1, 2019), end(27, 1, 2019) ],
+    [ 'Advanced Functional Programming (3 units)', 'KOAK', start(14, 1, 2019), end(10, 3, 2019) ],
+  ];
+
+  var formatted = data.slice();
+  for (var i = 0; i < formatted.length; i++) {
+    if (formatted[i].length > 4)
+      formatted[i] = formatted[i].slice(0, 4);
+  }
+  dataTable.addRows(formatted);
 
 
   chart.draw(dataTable, {
@@ -78,16 +112,35 @@ function drawChart() {
   });
 
   nowLine('timeline-container');
+  $("#timeline-container rect[width=3]").hide();
 
   google.visualization.events.addListener(chart, 'onmouseover', function(obj){
-    if(obj.row == 0){
-      $('.google-visualization-tooltip').css('display', 'none');
+    var row = data[obj.row];
+
+    if (row.length > 4) {
+      if (row[4].type && (row[4].type == 'now' || row[4].type == 'separator')) {
+        $('.google-visualization-tooltip').css('display', 'none');
+      }
     }
+
     nowLine('timeline-container');
+    $("#timeline-container rect[width=3]").hide();
   })
 
   google.visualization.events.addListener(chart, 'onmouseout', function(obj){
     nowLine('timeline-container');
+    $("#timeline-container rect[width=3]").hide();
+  })
+
+  google.visualization.events.addListener(chart, 'select', function(){
+    var row = data[chart.getSelection()[0].row];
+
+    if (row.length > 4) {
+      if (row[4].url) {
+        var win = window.open(row[4].url, '_blank');
+        win.focus();
+      }
+    }
   })
 }
 
@@ -119,7 +172,7 @@ function nowLine(div) {
 }
 
 $(document).ready(function(){
-  $.getJSON("https://api.github.com/repos/DeathMiner/Epitech-2021-Timeline/commits", function(json){
+  $.getJSON("https://api.github.com/repos/demaisj/Epitech-2021-Timeline/commits", function(json){
     var msg, el, date;
 
     $("#changelog-container").empty();
@@ -171,4 +224,7 @@ $(document).ready(function(){
   })
 
   set_theme(window.localStorage.getItem("dark") == "true" ? true : false);
+  setTimeout(function(){
+    $('body').addClass('ready');
+  }, 500);
 });
