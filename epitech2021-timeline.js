@@ -31,9 +31,6 @@ function drawChart() {
   var left = date(4, 9, 2018);
   var data = [
     [ '\0', 'Now', now, now, { type: 'now' } ],
-
-    [ 'Roadblock - Innovation & Part-Time', 'You must acquire at least 15 credits with the units (5 units) listed partly below:', left, left, { type: 'separator' } ],
-
     [ 'Moonshot', 'First week project', start(4, 9, 2018), end(7, 9, 2018) ],
     [ 'Moonshot', '#LOCAL THEME', start(4, 9, 2018), end(5, 9, 2018) ],
     [ 'Moonshot', '#SANTE', start(5, 9, 2018), end(6, 9, 2018) ],
@@ -50,17 +47,6 @@ function drawChart() {
 
     [ 'EIP Validation', 'EIP - Choix du sujet', start(3, 9, 2018), end(29, 1, 2019) ],
 
-    [ 'Part-Time Job', 'Part-time internship', start(17, 9, 2018), end(10, 3, 2019) ],
-
-    [ 'Roadblock - Soft Skills', 'You must acquire at least 5 credits with the units (6 units) listed partly below:', left, left, { type: 'separator' } ],
-
-    [ 'Écrits Professionnels', 'Avocat du diable', start(17, 9, 2018), end(7, 10, 2018) ],
-    [ 'Écrits Professionnels', '3 emails', start(8, 10, 2018), end(28, 10, 2018) ],
-    [ 'Écrits Professionnels', 'Mémo professionnel', start(29, 10, 2018), end(18, 11, 2018) ],
-    [ 'Écrits Professionnels', 'Informer: Le magazine du geek', start(12, 11, 2018), end(13, 1, 2019) ],
-
-    [ 'Roadblock - Technical Expertise', 'You must acquire at least 15 credits with the technical units (13 units) listed partly below:', left, left, { type: 'separator' } ],
-
     [ 'Mathematics', '301dannon', start(17, 9, 2018), end(30, 9, 2018) ],
     [ 'Mathematics', '302separation', start(1, 10, 2018), end(14, 10, 2018) ],
     [ 'Mathematics', '303make', start(15, 10, 2018), end(28, 10, 2018) ],
@@ -76,19 +62,12 @@ function drawChart() {
     [ 'Security - Cryptography', 'BTTF - CAESAR', start(5, 11, 2018), end(11, 11, 2018) ],
 
     [ 'Advanced C++ (3 units)', 'Babel', start(17, 9, 2018), end(7, 10, 2018) ],
-    [ 'Advanced C++ (3 units)', 'BTTF - Babel', start(5, 11, 2018), end(11, 11, 2018) ],
     [ 'Advanced C++ (3 units)', 'R-Type', start(5, 11, 2018), end(2, 12, 2018) ],
-    [ 'Advanced C++ (3 units)', 'BTTF - R-Type', start(21, 1, 2019), end(27, 1, 2019) ],
     [ 'Advanced C++ (3 units)', 'Zia', start(14, 1, 2019), end(10, 3, 2019) ],
 
     [ 'Application Development (3 units)', 'Dashboard', start(1, 10, 2018), end(21, 10, 2018) ],
-    [ 'Application Development (3 units)', 'BTTF - Dashboard', start(5, 11, 2018), end(11, 11, 2018) ],
     [ 'Application Development (3 units)', 'Epicture', start(29, 10, 2018), end(18, 11, 2018) ],
-    [ 'Application Development (3 units)', 'BTTF - Epicture', start(21, 1, 2019), end(27, 1, 2019) ],
     [ 'Application Development (3 units)', 'AREA', start(14, 1, 2019), end(10, 3, 2019) ],
-
-    [ 'Artificial Intelligence', 'Gomoku', start(8, 10, 2018), end(28, 10, 2018) ],
-    [ 'Artificial Intelligence', 'BTTF - Gomoku', start(5, 11, 2018), end(11, 11, 2018) ],
   ];
 
   var formatted = data.slice();
