@@ -89,12 +89,6 @@ function drawChart() {
 
     [ 'Artificial Intelligence', 'Gomoku', start(8, 10, 2018), end(28, 10, 2018) ],
     [ 'Artificial Intelligence', 'BTTF - Gomoku', start(5, 11, 2018), end(11, 11, 2018) ],
-
-    [ 'Advanced Functional Programming (3 units)', 'functional evalExpr', start(22, 10, 2018), end(4, 11, 2018) ],
-    [ 'Advanced Functional Programming (3 units)', 'BTTF - functional evalExpr', start(5, 11, 2018), end(11, 11, 2018) ],
-    [ 'Advanced Functional Programming (3 units)', 'dumbXML', start(19, 11, 2018), end(13, 1, 2019) ],
-    [ 'Advanced Functional Programming (3 units)', 'BTTF - dumbXML', start(21, 1, 2019), end(27, 1, 2019) ],
-    [ 'Advanced Functional Programming (3 units)', 'KOAK', start(14, 1, 2019), end(10, 3, 2019) ],
   ];
 
   var formatted = data.slice();
